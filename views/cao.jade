@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1 cao
+	p Welcome
+	p #{dates}
+	form(method='post')
+		label(for='name') name
+		input(name='name' type='text')
+		br
+		-for(var i=0; i<3; i++){
+			label(for='cao') cao#{i}
+			input.check(name='cao' type='checkbox' value=i)
+		-}
+		br
+		button(type='submit') ok
